@@ -1,0 +1,26 @@
+[Unit]
+Description=Lenderschain's distributed currency daemon
+After=network.target
+
+[Service]
+User=lenderschain
+Group=lenderschain
+
+Type=forking
+PIDFile=/var/lib/lenderschaind/lenderschaind.pid
+
+ExecStart=/usr/bin/lenderschaind -daemon -pid=/var/lib/lenderschaind/lenderschaind.pid \
+          -conf=/etc/lenderschain/lenderschain.conf -datadir=/var/lib/lenderschaind
+
+ExecStop=-/usr/bin/lenderschain-cli -conf=/etc/lenderschain/lenderschain.conf \
+         -datadir=/var/lib/lenderschaind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

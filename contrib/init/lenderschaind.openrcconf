@@ -1,0 +1,26 @@
+# /etc/conf.d/lenderschaind: config file for /etc/init.d/lenderschaind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/lenderschain/lenderschain.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/lenderschaind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/lenderschaind.pid"
+
+# Where to write lenderschaind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/lenderschaind"
+
+# User and group to own lenderschaind process
+#BITCOIND_USER="lenderschain"
+#BITCOIND_GROUP="lenderschain"
+
+# Path to lenderschaind executable
+#BITCOIND_BIN="/usr/bin/lenderschaind"
+
+# Nice value to run lenderschaind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

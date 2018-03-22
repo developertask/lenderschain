@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/lenderschain_bg.qm</file>
+        <file alias="ca">locale/lenderschain_ca.qm</file>
+        <file alias="cs">locale/lenderschain_cs.qm</file>
+        <file alias="da">locale/lenderschain_da.qm</file>
+        <file alias="de">locale/lenderschain_de.qm</file>
+        <file alias="en">locale/lenderschain_en.qm</file>
+        <file alias="en_US">locale/lenderschain_en_US.qm</file>
+        <file alias="es">locale/lenderschain_es.qm</file>
+        <file alias="fi">locale/lenderschain_fi.qm</file>
+        <file alias="fr_FR">locale/lenderschain_fr_FR.qm</file>
+        <file alias="it">locale/lenderschain_it.qm</file>
+        <file alias="ja">locale/lenderschain_ja.qm</file>
+        <file alias="ko_KR">locale/lenderschain_ko_KR.qm</file>
+        <file alias="nl">locale/lenderschain_nl.qm</file>
+        <file alias="pl">locale/lenderschain_pl.qm</file>
+        <file alias="pt">locale/lenderschain_pt.qm</file>
+        <file alias="pt_BR">locale/lenderschain_pt_BR.qm</file>
+        <file alias="ro_RO">locale/lenderschain_ro_RO.qm</file>
+        <file alias="ru">locale/lenderschain_ru.qm</file>
+        <file alias="sk">locale/lenderschain_sk.qm</file>
+        <file alias="sv">locale/lenderschain_sv.qm</file>
+        <file alias="tr">locale/lenderschain_tr.qm</file>
+        <file alias="uk">locale/lenderschain_uk.qm</file>
+        <file alias="zh_CN">locale/lenderschain_zh_CN.qm</file>
+        <file alias="zh_TW">locale/lenderschain_zh_TW.qm</file>
+    </qresource>
+</RCC>
