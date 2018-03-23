@@ -169,7 +169,7 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
         vSeeds.push_back(CDNSSeedData("178.238.226.185", "178.238.226.185"));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;

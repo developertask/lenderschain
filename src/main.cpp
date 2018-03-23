@@ -1617,31 +1617,24 @@ double ConvertBitsToDouble(unsigned int nBits)
 int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
+    int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 0)
             return 50000 * COIN;
     }
 
-    if (nHeight < Params().LAST_POW_BLOCK())
-        nSubsidy = 350000 * COIN;
-    else if (nHeight <= 5000)
-        nSubsidy = 1 * COIN;
-    else if (nHeight > 5000 && nHeight <= 25000)
-        nSubsidy = 30 * COIN;
-    else if (nHeight > 25000 && nHeight <= 100000)
-        nSubsidy = 20 * COIN;
-    else if (nHeight > 100000 && nHeight <= 1050000)
-        nSubsidy = 10 * COIN;
-    else if (nHeight > 1050000 && nHeight <= 2100000)
-        nSubsidy = 5 * COIN;
-    else if (nHeight > 2100000 && nHeight <= 3150000)
-        nSubsidy = 2.5 * COIN;
+    if (nHeight == 1 )
+        nSubsidy = 69505000 * COIN;
+    else if (nHeight == (Params().LAST_POW_BLOCK()- 100) )
+        nSubsidy = 2500 * COIN;
+    else if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 1 && nHeight != (Params().LAST_POW_BLOCK()- 100))
+        nSubsidy = 2499.99 * COIN;
+    else if (nHeight == Params().LAST_POW_BLOCK() )
+        nSubsidy = ( Params().MaxMoneyOut() - nMoneySupply ) * COIN;
     else
-        nSubsidy = 1.25 * COIN;
-
-    // Check if we reached the coin max supply.
-    int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
+        nSubsidy = 0 * COIN;
+    
 
     if (nMoneySupply + nSubsidy >= Params().MaxMoneyOut())
         nSubsidy = Params().MaxMoneyOut() - nMoneySupply;
